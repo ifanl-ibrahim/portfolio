@@ -1,0 +1,35 @@
+.footer {
+    background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb)));
+    color: rgb(var(--foreground-rgb));
+}
+
+.footerContainer {
+    display: flex;
+    justify-content: space-between;
+    /* display: flex;
+    justify-content: space-between;
+    align-items: center; */
+    padding: 1rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+}
+
+.footerLink {
+    font-size: larger;
+    display: flex;
+    column-gap: 20px;
+}
+
+.copytight {
+    display: flex;
+    justify-content: center;
+    padding: 8px;
+}
+
+/* @media (max-width: 700px) {
+    .copytight {
+        font-size: 10px;
+    }
+} */
