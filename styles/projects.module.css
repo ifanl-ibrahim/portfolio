@@ -1,0 +1,143 @@
+.projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15vh;
+    padding: 3vh;
+    width: max-content;
+}
+
+.projects h1, .modal h1 {
+    text-align: center;
+    font-size: 6vh;
+    text-transform: uppercase;
+}
+
+.projectsList {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 3vh;
+}
+
+.card {
+    width: 50vh;
+    border-radius: 4%;
+    padding: 0;
+    position: relative;
+}
+
+.cardMedia {
+    position: absolute;
+}
+
+.cardContent {
+    position: relative;
+    padding: 0;
+    height: 285px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vh;
+}
+
+.cardContent:hover {
+    background: rgb(var(--color-end-rgb));
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.cardContent:hover .cardText {
+    display: flex;
+    font-size: x-large;
+    font-weight: 600;
+    color: rgb(var(--foreground-rgb));
+}
+
+.cardText {
+    display: none;
+}
+
+.modal {
+    width: 100vh;
+    background: linear-gradient(to bottom, rgb(var(--background-start-rgb)), rgb(var(--background-end-rgb)));
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 75vh;
+    margin: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 3%;
+}
+
+.logo {
+    width: 30vh;
+}
+
+.modal article {
+    text-align: center;
+    font-size: x-large;
+}
+
+.modal section {
+    display: flex;
+    gap: 2vh;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 1vh;
+    border: 1px solid rgb(131, 130, 130);
+    font-size: medium;
+    color: rgb(var(--foreground-rgb));
+}
+
+.link:hover {
+    background: rgb(var(--color-end-rgb));
+    cursor: pointer;
+}
+
+@media (max-width: 900px) {
+    .projects {
+        gap: 10vh;
+    }
+
+    .projectsList {
+        grid-template-columns: auto auto;
+        gap: 2vh;
+    }
+
+    .card {
+        width: 35vh;
+    }
+}
+
+@media (max-width: 767px) {
+    .projectsList {
+        grid-template-columns: auto;
+    }
+
+    .card {
+        width: 45vh;
+    }
+
+    .modal {
+        width: 50vh;
+        height: 80vh;
+        margin: auto;
+    }
+
+    .projects h1, .modal h1 {
+        font-size: 4vh;
+    }
+
+    .modal article {
+        font-size: larger;
+    }
+}

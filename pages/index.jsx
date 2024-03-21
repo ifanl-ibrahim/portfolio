@@ -2,7 +2,8 @@ import * as React from 'react';
 import styles from '../styles/index.module.css'
 import DownloadIcon from '@mui/icons-material/Download';
 import Skills from '../components/Skills';
-import Image from 'next/image';
+import Projects from '../components/Projects';
+import Contact from '../components/Contact';
 
 export default function Home() {
 
@@ -20,20 +21,20 @@ export default function Home() {
                         </a>
                     </div>
                 </div>
-                <Image
+                <img
                     className={styles.imgLight}
-                    class="fit-picture"
                     src={"../assets/undraw_taken_vert.svg"}
                     alt="image d'accueil"
                 />
-                <Image
+                <img
                     className={styles.imgDark}
-                    class="fit-picture"
                     src={"../assets/undraw_taken_mauve.svg"}
                     alt="image d'accueil"
                 />
             </div>
             <Skills />
+            <Projects />
+            <Contact />
         </div >
     );
 }

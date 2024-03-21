@@ -4,7 +4,6 @@
   gap: 25vh;
   justify-content: space-between;
   align-items: center;
-  padding: 6rem;
   min-height: 100vh;
 }
 
@@ -13,6 +12,7 @@
   justify-content: center;
   align-items: center;
   gap: 10vh;
+  padding: 6rem;
   margin-top: 10vh;
 }
 
@@ -74,6 +74,10 @@
 }
 
 @media (prefers-color-scheme: dark) {
+  .homeContent {
+    padding: 0rem;
+  }
+
   .imgDark {
     display: flex;
     width: 30%;
@@ -93,6 +97,7 @@
 
   .homeContent {
     gap: 5vh;
+    padding: 0rem;
   }
 
   .textBox {
