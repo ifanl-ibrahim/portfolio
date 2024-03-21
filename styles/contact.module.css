@@ -53,6 +53,10 @@
     gap: 2vh;
 }
 
+.alert {
+    color: red;
+}
+
 @media (prefers-color-scheme: dark) {
     .imgLight {
         display: none;
