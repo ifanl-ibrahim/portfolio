@@ -1,0 +1,118 @@
+.skills {
+    display: flex;
+    flex-direction: column;
+    gap: 15vh;
+    border-radius: 8vh;
+    padding: 3vh;
+    width: 100vh;
+    box-shadow: 0px 60px 49px -72px rgb(var(--color-start-rgb));
+}
+
+.skills h1 {
+    text-align: center;
+    font-size: 6vh;
+    text-transform: uppercase;
+}
+
+.slider {
+    width: 80vh;
+    margin: auto;
+    overflow: hidden;
+}
+
+.skillsList {
+    display: flex;
+    animation: animation-slider 15s infinite ease-in-out;
+}
+
+.skillsItems {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: xxx-large;
+    padding: 3vh 0;
+    flex-shrink: 0;
+    width: 100%;
+}
+
+.items {
+    font-size: 15vh;
+}
+
+@media (max-width: 900px) {
+    .skills h1 {
+        font-size: 5vh;
+    }
+}
+  
+@media (max-width: 767px) {
+    .skills h1 {
+        font-size: 4vh;
+    }
+
+    .items {
+        font-size: 10vh;
+    }
+}
+
+@keyframes animation-slider {
+    0% {
+        transform: translateX(0);
+    }
+
+    7.14% {
+        transform: translateX(-100%);
+    }
+
+    14.28% {
+        transform: translateX(-200%);
+    }
+
+    21.42% {
+        transform: translateX(-300%);
+    }
+
+    28.56% {
+        transform: translateX(-400%);
+    }
+
+    35.7% {
+        transform: translateX(-500%);
+    }
+
+    42.84% {
+        transform: translateX(-600%);
+    }
+
+    50% {
+        transform: translateX(-700%);
+    }
+
+    57.14% {
+        transform: translateX(-800%);
+    }
+
+    64.28% {
+        transform: translateX(-900%);
+    }
+
+    71.42% {
+        transform: translateX(-1000%);
+    }
+
+    78.56% {
+        transform: translateX(-1100%);
+    }
+
+    85.7% {
+        transform: translateX(-1200%);
+    }
+
+    92.84% {
+        transform: translateX(-1300%);
+    }
+
+    100% {
+        transform: translateX(-1400%);
+    }
+}

@@ -1,5 +1,4 @@
 .navbar {
-    /* background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))); */
     background: rgb(var(--background-start-rgb));
     color: rgb(var(--foreground-rgb));
     position: fixed;
@@ -46,17 +45,21 @@
 
 .link:hover {
     border-radius: 50% 20% / 10% 40%;
-    background-color: #6c63ff;
-    color: #fff;
+    background: rgb(var(--color-start-rgb));
+    /* color: #fff; */
 }
 
-.contactLink {
-    font-size: x-large;
+.social {
+    font-size: xx-large;
+}
+
+.social:hover {
+    color: rgb(var(--color-start-rgb));
 }
 
 .languageSelect {
     padding: 1rem;
-    border: solid 2px #6c63ff;
+    border: solid 2px rgb(var(--color-start-rgb));
     border-radius: 8px;
     background-color: transparent;
     color: inherit;
@@ -64,8 +67,7 @@
 }
 
 .languageSelect option {
-    color: #333; /* Couleur du texte */
-    font-size: 2vh; /* Taille de la police */
+    font-size: 2vh;
 }
 
 .menuIcon {
@@ -76,6 +78,10 @@
 @media (min-width: 801px) and (max-width: 900px) {
     .divLink {
         font-size: 16px;
+    }
+
+    .social {
+        font-size: x-large;
     }
 }
 
@@ -105,5 +111,9 @@
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+
+    .social {
+        font-size: xx-large;
     }
 }
