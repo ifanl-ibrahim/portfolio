@@ -15,30 +15,6 @@ export default function Contact() {
     const [phone, setPhone] = useState('')
     const [message, setMessage] = useState('')
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-
-        axios.post('/send-email', {
-            firstName,
-            lastName,
-            email,
-            phone,
-            message
-        })
-        .then((response) => {
-            console.log('Email sent successfully');
-            // Réinitialisez les états du formulaire après l'envoi
-            setFirstName('');
-            setLastName('');
-            setEmail('');
-            setPhone('');
-            setMessage('');
-        })
-        .catch((error) => {
-            console.error('Error sending email:', error);
-        });
-    };
-
     return (
         <div className={styles.contact}>
             <div className={styles.contact2}>
@@ -112,7 +88,7 @@ export default function Contact() {
                             className={styles.button}
                             variant="contained"
                             type="submit"
-                            onClick={handleSubmit}
+                            // onClick={handleSubmit}
                             disabled={firstName=='' || lastName=='' || email=='' || message==''}
                         >
                             Envoyer
