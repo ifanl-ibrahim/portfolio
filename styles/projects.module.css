@@ -103,6 +103,28 @@
     cursor: pointer;
 }
 
+@media (min-width: 1135px) and (max-width: 1740px) {
+    .projectsList {
+        grid-template-columns: auto auto;
+        gap: 2vh;
+    }
+
+    .card {
+        width: 50vh;
+    }
+}
+
+@media (min-width: 901px) and (max-width: 1134px) {
+    .projectsList {
+        grid-template-columns: auto auto;
+        gap: 2vh;
+    }
+
+    .card {
+        width: 40vh;
+    }
+}
+
 @media (max-width: 900px) {
     .projects {
         gap: 10vh;

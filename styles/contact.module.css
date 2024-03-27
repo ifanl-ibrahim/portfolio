@@ -57,7 +57,7 @@
     .imgLight {
         display: none;
     }
-    
+
     .imgDark {
         display: flex;
     }
@@ -65,10 +65,12 @@
 
 @media (max-width: 900px) {
     .contact {
+        grid-template-columns: 20% 80%;
         gap: 2vh;
     }
 
-    .imgLight, .imgDark {
+    .imgLight,
+    .imgDark {
         width: 30vh;
     }
 
@@ -79,7 +81,8 @@
         margin-bottom: 3vh;
     }
 
-    .form, .formContent {
+    .form,
+    .formContent {
         display: grid;
         grid-template-columns: auto;
         padding: 1vh;
@@ -89,7 +92,7 @@
 
     .formControl {
         margin-bottom: 1vh;
-        width: 30vh;
+        width: 40vh;
         background-color: aliceblue;
     }
 }
@@ -114,7 +117,8 @@
         background-color: aliceblue;
     }
 
-    .imgDark, .imgLight {
+    .imgDark,
+    .imgLight {
         display: none;
     }
 

@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import styles from '../styles/projects.module.css';
 import { Card, Typography, CardMedia, CardContent, Modal, Link } from '@mui/material'
 import CloseIcon from '@mui/icons-material/Close';
@@ -11,6 +11,33 @@ export default function Projects() {
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
     const projects = [
+        {
+            id: 0,
+            title: 'Le Joli Port',
+            description: `${ t('projects.project1.description') }`,
+            language: 'Next.js',
+            cover: '../assets/MAT-20141001-7167.jpg',
+            logo: '../assets/logo-joliport-cercle.png',
+            link: 'https://joli-port.vercel.app/'
+        },
+        {
+            id: 0,
+            title: 'Le Joli Port',
+            description: `${ t('projects.project1.description') }`,
+            language: 'Next.js',
+            cover: '../assets/MAT-20141001-7167.jpg',
+            logo: '../assets/logo-joliport-cercle.png',
+            link: 'https://joli-port.vercel.app/'
+        },
+        {
+            id: 0,
+            title: 'Le Joli Port',
+            description: `${ t('projects.project1.description') }`,
+            language: 'Next.js',
+            cover: '../assets/MAT-20141001-7167.jpg',
+            logo: '../assets/logo-joliport-cercle.png',
+            link: 'https://joli-port.vercel.app/'
+        },
         {
             id: 0,
             title: 'Le Joli Port',

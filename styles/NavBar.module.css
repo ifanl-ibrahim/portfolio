@@ -10,6 +10,7 @@
     display: grid;
     grid-template-columns: 20% 80%;
     padding: 1rem;
+    align-items: center;
 }
 
 .logoLight {
@@ -70,15 +71,20 @@
     background-color: transparent;
     color: inherit;
     appearance: none;
+    height: auto;
 }
 
 .languageSelect option {
-    font-size: 2vh;
+    font-size: medium;
+    color: rgb(var(--color-start-rgb));
+    background-color: rgb(var(--background-end-rgb));
 }
 
 .menuIcon {
     display: none;
     cursor: pointer;
+    align-items: center;
+    justify-content: center;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -91,25 +97,7 @@
     }
 }
 
-@media (min-width: 801px) and (max-width: 900px) {
-    .navbarContainer {
-        grid-template-columns: 25% 75%;
-    }
-
-    .logoDark img, .logoLight img {
-        width: 15vh;
-    }
-
-    .divLink {
-        font-size: 16px;
-    }
-
-    .social {
-        font-size: x-large;
-    }
-}
-
-@media (max-width: 850px) {
+@media (max-width: 1180px) {
     .logoDark img, .logoLight img {
         width: 20vh;
     }
@@ -137,11 +125,23 @@
 
     .menuIcon {
         display: flex;
-        align-items: center;
-        justify-content: center;
+    }
+
+    .menuIcon svg {
+        font-size: 4vh;
     }
 
     .social {
         font-size: xx-large;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 1180px) {
+    .languageSelect {
+        font-size: 2vh;
+    }
+
+    .menuIcon svg {
+        font-size: 6vh;
     }
 }

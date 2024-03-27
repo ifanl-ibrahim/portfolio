@@ -1,4 +1,5 @@
 import * as React from 'react';
+import Head from 'next/head';
 import { useTranslation } from 'react-i18next';
 import styles from '../styles/index.module.css'
 import DownloadIcon from '@mui/icons-material/Download';
@@ -11,6 +12,10 @@ export default function Home() {
 
     return (
         <div id="home" className={styles.main}>
+            <Head>
+                <title>Ifanl IBRAHIM</title>
+                <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+            </Head>
             <div className={styles.homeContent}>
                 <div className={styles.textBox}>
                     <h1>Ifanl IBRAHIM</h1>

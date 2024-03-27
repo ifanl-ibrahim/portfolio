@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import Link from 'next/link';
 import styles from '../styles/navBar.module.css';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
@@ -52,8 +52,8 @@ export default function NavBar() {
                             <Link target='_blank' href="https://github.com/ifanl-ibrahim"><GitHubIcon className={styles.social} /></Link>
                         </div>
                     </div>
-                    <select className={styles.languageSelect} onChange={handleLangChange}>
-                        <option value='fr' selected>FR</option>
+                    <select className={styles.languageSelect} defaultValue='fr' onChange={handleLangChange}>
+                        <option value='fr'>FR</option>
                         <option value='en'>EN</option>
                     </select>
                 </div>
