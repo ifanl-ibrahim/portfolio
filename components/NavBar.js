@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
 import Link from 'next/link';
 import styles from '../styles/navBar.module.css';
@@ -9,11 +10,15 @@ import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 
 export default function NavBar() {
+    const { t, i18n } = useTranslation('fr', { useSuspense: false });
     const [menuOpen, setMenuOpen] = useState(false);
-
+    
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
     };
+    function handleLangChange(event) {
+        i18n.changeLanguage(event.target.value)
+    }
 
     return (
         <nav className={styles.navbar}>
@@ -36,10 +41,10 @@ export default function NavBar() {
                     </div>
                     <div className={`${styles.navLinks} ${menuOpen ? styles.open : ''}`}>
                         <div className={styles.divLink}>
-                            <Link className={styles.link} onClick={() => setMenuOpen(false)} href="#home">Accueil</Link>
-                            <Link className={styles.link} onClick={() => setMenuOpen(false)} href="/#skills">Compétences</Link>
-                            <Link className={styles.link} onClick={() => setMenuOpen(false)} href="/#projects">Projets</Link>
-                            <Link className={styles.link} onClick={() => setMenuOpen(false)} href="/#contact">Contacte</Link>
+                            <Link className={styles.link} onClick={() => setMenuOpen(false)} href="#home">{ t('header.home') }</Link>
+                            <Link className={styles.link} onClick={() => setMenuOpen(false)} href="/#skills">{ t('header.skills') }</Link>
+                            <Link className={styles.link} onClick={() => setMenuOpen(false)} href="/#projects">{ t('header.projects') }</Link>
+                            <Link className={styles.link} onClick={() => setMenuOpen(false)} href="/#contact">{ t('header.contact') }</Link>
                         </div>
                         <div>
                             <Link target='_blank' href="https://www.linkedin.com/in/ifanl-ibrahim"><LinkedInIcon className={styles.social} /></Link>
@@ -47,9 +52,9 @@ export default function NavBar() {
                             <Link target='_blank' href="https://github.com/ifanl-ibrahim"><GitHubIcon className={styles.social} /></Link>
                         </div>
                     </div>
-                    <select className={styles.languageSelect}>
-                        <option>FR</option>
-                        <option>EN</option>
+                    <select className={styles.languageSelect} onChange={handleLangChange}>
+                        <option value='fr' selected>FR</option>
+                        <option value='en'>EN</option>
                     </select>
                 </div>
             </div>

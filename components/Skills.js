@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import styles from '../styles/skills.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHtml5, faCss3, faPhp, faGithub, faWordpress, faJs, faReact, faSymfony, faPython, faDev } from '@fortawesome/free-brands-svg-icons';
@@ -7,6 +7,7 @@ import JoinFullIcon from '@mui/icons-material/JoinFull';
 import StorageIcon from '@mui/icons-material/Storage';
 
 export default function Skills() {
+    const { t } = useTranslation('fr', { useSuspense: false });
     const slides = [
         { id: 0, title: 'HTML', icon: <FontAwesomeIcon className={styles.items} icon={faHtml5} /> },
         { id: 1, title: 'CSS', icon: <FontAwesomeIcon className={styles.items} icon={faCss3} /> },
@@ -24,9 +25,10 @@ export default function Skills() {
         { id: 13, title: 'Python', icon: <FontAwesomeIcon className={styles.items} icon={faPython} /> },
         { id: 14, title: 'HTML', icon: <FontAwesomeIcon className={styles.items} icon={faHtml5} /> }
     ];
+
     return (
         <div id="skills" className={styles.skills}>
-            <h1>Compétences</h1>
+            <h1>{ t('skills.h1') }</h1>
             <section className={styles.slider}>
                 <div className={styles.skillsList}>
                     {slides.map((slide) => (

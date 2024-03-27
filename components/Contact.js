@@ -1,10 +1,12 @@
 import * as React from 'react';
+import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
 import styles from '../styles/contact.module.css';
 import { Box, FormControl, TextField, Button, Snackbar } from '@mui/material';
 import { sendContactForm } from '../lib/api';
 
 export default function Contact() {
+    const { t } = useTranslation('fr', { useSuspense: false });
     const [open, setOpen] = useState(false);
     const [alert, setAlert] = useState('');
     const handleOpen = () => setOpen(true);
@@ -21,7 +23,7 @@ export default function Contact() {
     const [email, setEmail] = useState('')
     const [phone, setPhone] = useState('')
     const [message, setMessage] = useState('')
-
+    
     const handleSubmit = async () => {
         try {
             await sendContactForm(
@@ -33,17 +35,17 @@ export default function Contact() {
                     message: message
                 }
             )
-            setAlert("Message Envoyer !")
+            setAlert(`${ t('contact.errorMessageTrue') }`)
             handleOpen()
         } catch (error) {
-            setAlert("Oops erreur.")
+            setAlert(`${ t('contact.errorMessageFalse') }`)
             handleOpen()
         }
     }
 
     return (
-        <div id="contact" className={styles.contact}>
-            <div className={styles.contact2}>
+        <div id="contact" className={styles.contactContainer}>
+            <div className={styles.contact}>
                 <img
                     className={styles.imgLight}
                     src="../assets/undraw_letter_re_vert.svg"
@@ -55,12 +57,12 @@ export default function Contact() {
                     alt="image de message"
                 />
                 <section className={styles.formContent}>
-                    <h1>{"Je suis à l'écoute"}</h1>
+                    <h1>{ t('contact.h1') }</h1>
                     <Box className={styles.form}>
                         <FormControl className={styles.formControl}>
                             <TextField
                                 id="firstname"
-                                label="Prénom"
+                                label={ t('contact.firstname') }
                                 variant="filled"
                                 value={firstName}
                                 required
@@ -70,7 +72,7 @@ export default function Contact() {
                         <FormControl className={styles.formControl}>
                             <TextField
                                 id="lastname"
-                                label="Nom"
+                                label={ t('contact.lastname') }
                                 variant="filled"
                                 value={lastName}
                                 required
@@ -80,7 +82,7 @@ export default function Contact() {
                         <FormControl className={styles.formControl}>
                             <TextField
                                 id="email"
-                                label="E-mail"
+                                label={ t('contact.email') }
                                 variant="filled"
                                 type='email'
                                 value={email}
@@ -91,7 +93,7 @@ export default function Contact() {
                         <FormControl className={styles.formControl}>
                             <TextField
                                 id="phone"
-                                label="Téléphone"
+                                label={ t('contact.phone') }
                                 variant="filled"
                                 type='tel'
                                 value={phone}
@@ -101,7 +103,7 @@ export default function Contact() {
                         <FormControl className={styles.formControl}>
                             <TextField
                                 id="message"
-                                label="Message"
+                                label={ t('contact.message') }
                                 variant="filled"
                                 multiline
                                 rows={5}
@@ -117,7 +119,7 @@ export default function Contact() {
                             onClick={handleSubmit}
                             disabled={firstName == '' || lastName == '' || email == '' || message == ''}
                         >
-                            Envoyer
+                            { t('contact.button') }
                         </Button>
                         <Snackbar
                             anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}

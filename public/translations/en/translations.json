@@ -1,0 +1,38 @@
+{
+    "header": {
+        "home": "Home",
+        "skills": "Skills",
+        "projects": "Projects",
+        "contact": "Contact"
+    },
+    "index": {
+        "h2": "Web developer",
+        "description": "I'm passionate about the digital world, and will put my technical skills, creativity and adaptability to work for you. My experience combined with my passion for new technologies make me an ideal candidate to bring your projects and your digital image to life.",
+        "textCV": "You can already",
+        "button": "Download my CV !"
+    },
+    "skills": {
+        "h1": "Skills"
+    },
+    "projects": {
+        "h1": "Projects",
+        "more": "Find out more about the project",
+        "madeIn": "made in",
+        "closeButton": "Close",
+        "viewButton": "See the Project",
+        "project1": {
+            "description": "Website for 'Le joli Port' restaurant (mobile)"
+        }
+    },
+    "contact": {
+        "h1": "I'm a good listener",
+        "firstname": "First name",
+        "lastname": "Last name",
+        "email": "E-mail",
+        "phone": "Phone",
+        "message": "Message",
+        "button": "Sent",
+        "errorMessageTrue": "Message send !",
+        "errorMessageFalse": "Oops error."
+    }
+}

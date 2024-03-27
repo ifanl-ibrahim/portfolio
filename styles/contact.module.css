@@ -1,9 +1,9 @@
-.contact {
+.contactContainer {
     /* background: linear-gradient(to right, rgb(var(--background-start-rgb)), rgb(var(--background-end-rgb))); */
     width: 200vh;
 }
 
-.contact2 {
+.contact {
     display: grid;
     grid-template-columns: auto auto;
     max-width: max-content;
@@ -64,7 +64,7 @@
 }
 
 @media (max-width: 900px) {
-    .contact2 {
+    .contact {
         gap: 2vh;
     }
 

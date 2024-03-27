@@ -1,10 +1,12 @@
 import * as React from 'react';
+import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
 import styles from '../styles/projects.module.css';
 import { Card, Typography, CardMedia, CardContent, Modal, Link } from '@mui/material'
 import CloseIcon from '@mui/icons-material/Close';
 
 export default function Projects() {
+    const { t } = useTranslation('fr', { useSuspense: false });
     const [open, setOpen] = useState(false)
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
@@ -12,7 +14,7 @@ export default function Projects() {
         {
             id: 0,
             title: 'Le Joli Port',
-            description: 'Site pour le restaurant "Le joli Port" (mobile)',
+            description: `${ t('projects.project1.description') }`,
             language: 'Next.js',
             cover: '../assets/MAT-20141001-7167.jpg',
             logo: '../assets/logo-joliport-cercle.png',
@@ -22,7 +24,7 @@ export default function Projects() {
 
     return (
         <div id="projects" className={styles.projects}>
-            <h1>Projets</h1>
+            <h1>{ t('projects.h1') }</h1>
             <section className={styles.projectsList}>
                 {projects.map((project) => (
                     <Card variant="plain" key={project.id} className={styles.card}>
@@ -38,7 +40,7 @@ export default function Projects() {
                                 {project.title}
                             </Typography>
                             <Typography className={styles.cardText} href="#dribbble-shot">
-                                En savoir plus sur le projet
+                                { t('projects.more') }
                             </Typography>
                         </CardContent>
                         <Modal open={open} onClose={handleClose}>
@@ -51,11 +53,11 @@ export default function Projects() {
                                 />
                                 <article>
                                     <p>{project.description}</p>
-                                    <p>réalisé en {project.language}</p>
+                                    <p>{ t('projects.madeIn') } {project.language}</p>
                                 </article>
                                 <section>
-                                    <Link className={styles.link} underline='none' onClick={handleClose}><CloseIcon /> Fermer</Link>
-                                    <Link href={project.link} target='_blank' className={styles.link} underline='none' onClick={handleClose}>Voir le Projet</Link>
+                                    <Link className={styles.link} underline='none' onClick={handleClose}><CloseIcon />{ t('projects.closeButton') }</Link>
+                                    <Link href={project.link} target='_blank' className={styles.link} underline='none' onClick={handleClose}>{ t('projects.viewButton') }</Link>
                                 </section>
                             </div>
 

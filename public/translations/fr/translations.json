@@ -1,0 +1,38 @@
+{
+    "header": {
+        "home": "Accueil",
+        "skills": "Compétences",
+        "projects": "Projets",
+        "contact": "Contacte"
+    },
+    "index": {
+        "h2": "Développeur web",
+        "description": "Passionné par les métiers du numérique je met à profit mes compétences techniques, ma créativité et ma capacité d'adaptation à votre service. Mon expérience combinée à ma passion pour les nouvelles technologies, font de moi un candidat idée pour donée vie à vos projets et votre image numérique.",
+        "textCV": "Vous pouvez d'ores et déjà",
+        "button": "Télécharger mon CV!"
+    },
+    "skills": {
+        "h1": "Compétences"
+    },
+    "projects": {
+        "h1": "Projets",
+        "more": "En savoir plus sur le projet",
+        "madeIn": "réalisé en",
+        "closeButton": "Fermer",
+        "viewButton": "Voir le Projet",
+        "project1": {
+            "description": "Site pour le restaurant 'Le joli Port' (mobile)"
+        }
+    },
+    "contact": {
+        "h1": "Je suis à l'écoute",
+        "firstname": "Prénom",
+        "lastname": "Nom",
+        "email": "E-mail",
+        "phone": "Téléphone",
+        "message": "Message",
+        "button": "Envoyé",
+        "errorMessageTrue": "Message Envoyer !",
+        "errorMessageFalse": "Oups erreur."
+    }
+}
