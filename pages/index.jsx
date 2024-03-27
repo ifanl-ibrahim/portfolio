@@ -1,8 +1,6 @@
 import * as React from 'react';
 import Head from 'next/head';
 import { useTranslation } from 'react-i18next';
-import NavBar from '../components/NavBar'
-import Footer from '../components/Footer'
 import styles from '../styles/index.module.css'
 import DownloadIcon from '@mui/icons-material/Download';
 import Skills from '../components/Skills';
@@ -18,7 +16,6 @@ export default function Home() {
                 <title>Ifanl IBRAHIM</title>
                 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
             </Head>
-            <NavBar />
             <div className={styles.homeContent}>
                 <div className={styles.textBox}>
                     <h1>Ifanl IBRAHIM</h1>
@@ -45,7 +42,6 @@ export default function Home() {
             <Skills />
             <Projects />
             <Contact />
-            <Footer />
         </div >
     );
 }
