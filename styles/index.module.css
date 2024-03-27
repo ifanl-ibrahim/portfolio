@@ -13,7 +13,7 @@
   align-items: center;
   gap: 10vh;
   padding: 6rem;
-  margin-top: 10vh;
+  margin-top: 20vh;
 }
 
 .textBox {
@@ -98,6 +98,7 @@
   .homeContent {
     gap: 5vh;
     padding: 0rem;
+    margin-top: 10vh;
   }
 
   .textBox {

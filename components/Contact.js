@@ -1,12 +1,11 @@
 import * as React from 'react';
-import axios from 'axios';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import styles from '../styles/contact.module.css';
 import { Box, FormControl, TextField, Button, Snackbar } from '@mui/material';
 import { sendContactForm } from '../lib/api';
 
 export default function Contact() {
-    const [open, setOpen] = useState(true);
+    const [open, setOpen] = useState(false);
     const [alert, setAlert] = useState('');
     const handleOpen = () => setOpen(true);
     const handleClose = (event, reason) => {
@@ -43,7 +42,7 @@ export default function Contact() {
     }
 
     return (
-        <div className={styles.contact}>
+        <div id="contact" className={styles.contact}>
             <div className={styles.contact2}>
                 <img
                     className={styles.imgLight}
@@ -56,7 +55,7 @@ export default function Contact() {
                     alt="image de message"
                 />
                 <section className={styles.formContent}>
-                    <h1>Je suis à l'écoute</h1>
+                    <h1>{"Je suis à l'écoute"}</h1>
                     <Box className={styles.form}>
                         <FormControl className={styles.formControl}>
                             <TextField
@@ -121,7 +120,7 @@ export default function Contact() {
                             Envoyer
                         </Button>
                         <Snackbar
-                            className={styles.alert}
+                            anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
                             open={open}
                             onClose={handleClose}
                             message={alert}

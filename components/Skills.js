@@ -25,7 +25,7 @@ export default function Skills() {
         { id: 14, title: 'HTML', icon: <FontAwesomeIcon className={styles.items} icon={faHtml5} /> }
     ];
     return (
-        <div className={styles.skills}>
+        <div id="skills" className={styles.skills}>
             <h1>Compétences</h1>
             <section className={styles.slider}>
                 <div className={styles.skillsList}>

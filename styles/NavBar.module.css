@@ -12,8 +12,14 @@
     padding: 1rem;
 }
 
-.logo {
-    font-size: 1.5rem;
+.logoLight {
+    display: flex;
+    margin: auto;
+}
+
+.logoDark {
+    display: none;
+    margin: auto;
 }
 
 .content {
@@ -75,7 +81,25 @@
     cursor: pointer;
 }
 
+@media (prefers-color-scheme: dark) {
+    .logoDark {
+        display: flex;
+    }
+
+    .logoLight {
+        display: none;
+    }
+}
+
 @media (min-width: 801px) and (max-width: 900px) {
+    .navbarContainer {
+        grid-template-columns: 25% 75%;
+    }
+
+    .logoDark img, .logoLight img {
+        width: 15vh;
+    }
+
     .divLink {
         font-size: 16px;
     }
@@ -85,7 +109,11 @@
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 850px) {
+    .logoDark img, .logoLight img {
+        width: 20vh;
+    }
+
     .navLinks {
         display: none;
         flex-direction: column;

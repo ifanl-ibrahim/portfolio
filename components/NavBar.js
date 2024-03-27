@@ -18,7 +18,18 @@ export default function NavBar() {
     return (
         <nav className={styles.navbar}>
             <div className={styles.navbarContainer}>
-                <span className={styles.logo}>LOGO</span>
+                <Link className={styles.logoLight} href="/">
+                    <img
+                        src={"../assets/logo-black.png"}
+                        alt="image d'accueil"
+                    />
+                </Link>
+                <Link className={styles.logoDark} href="/">
+                    <img
+                        src={"../assets/logo-white.png"}
+                        alt="image d'accueil"
+                    />
+                </Link>
                 <div className={styles.content}>
                     <div className={styles.menuIcon} onClick={toggleMenu}>
                         {menuOpen ? <CloseIcon /> : <MenuIcon />}
@@ -26,14 +37,14 @@ export default function NavBar() {
                     <div className={`${styles.navLinks} ${menuOpen ? styles.open : ''}`}>
                         <div className={styles.divLink}>
                             <Link className={styles.link} onClick={() => setMenuOpen(false)} href="#home">Accueil</Link>
-                            <Link className={styles.link} onClick={() => setMenuOpen(false)} href="/">Compétences</Link>
-                            <Link className={styles.link} onClick={() => setMenuOpen(false)} href="/">Projets</Link>
-                            <Link className={styles.link} onClick={() => setMenuOpen(false)} href="/">Contacte</Link>
+                            <Link className={styles.link} onClick={() => setMenuOpen(false)} href="/#skills">Compétences</Link>
+                            <Link className={styles.link} onClick={() => setMenuOpen(false)} href="/#projects">Projets</Link>
+                            <Link className={styles.link} onClick={() => setMenuOpen(false)} href="/#contact">Contacte</Link>
                         </div>
                         <div>
-                            <Link href="https://www.linkedin.com/in/ifanl-ibrahim"><LinkedInIcon className={styles.social}/></Link>
-                            <Link href="mailto:ifanl.ibrahim@gmail.com"><EmailIcon className={styles.social}/></Link>
-                            <Link href="https://github.com/ifanl-ibrahim"><GitHubIcon className={styles.social}/></Link>
+                            <Link target='_blank' href="https://www.linkedin.com/in/ifanl-ibrahim"><LinkedInIcon className={styles.social} /></Link>
+                            <Link target='_blank' href="mailto:ifanl.ibrahim@gmail.com"><EmailIcon className={styles.social} /></Link>
+                            <Link target='_blank' href="https://github.com/ifanl-ibrahim"><GitHubIcon className={styles.social} /></Link>
                         </div>
                     </div>
                     <select className={styles.languageSelect}>

@@ -21,11 +21,11 @@ export default function Projects() {
     ];
 
     return (
-        <div className={styles.projects}>
+        <div id="projects" className={styles.projects}>
             <h1>Projets</h1>
             <section className={styles.projectsList}>
                 {projects.map((project) => (
-                    <Card variant="plain" className={styles.card}>
+                    <Card variant="plain" key={project.id} className={styles.card}>
                         <CardMedia
                             className={styles.cardMedia}
                             component="img"

@@ -9,8 +9,16 @@
     padding: 1rem;
 }
 
-.logo {
-    font-size: 1.5rem;
+.logoLight {
+    display: flex;
+}
+
+.logoDark {
+    display: none;
+}
+
+.logoDark img, .logoLight img {
+    width: 20vh;
 }
 
 .footerLink {
@@ -33,13 +41,31 @@
     padding: 8px;
 }
 
-@media (min-width: 801px) and (max-width: 900px) {
+@media (prefers-color-scheme: dark) {
+    .logoDark {
+        display: flex;
+    }
+
+    .logoLight {
+        display: none;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 900px) {
+    .logoDark img, .logoLight img {
+        width: 10vh;
+    }
+
     .social {
         font-size: x-large;
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 799px) {
+    .logoDark img, .logoLight img {
+        width: 16vh;
+    }
+
     .social {
         font-size: xx-large;
     }
