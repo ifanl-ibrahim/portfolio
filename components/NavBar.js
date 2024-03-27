@@ -21,38 +21,38 @@ export default function NavBar() {
     }
 
     return (
-        <nav >
-            <div >
-                <Link  href="/">
+        <nav className={styles.navbar}>
+            <div className={styles.navbarContainer}>
+                <Link className={styles.logoLight} href="/">
                     <img
                         src={"../assets/logo-black.png"}
                         alt="image d'accueil"
                     />
                 </Link>
-                <Link  href="/">
+                <Link className={styles.logoDark} href="/">
                     <img
                         src={"../assets/logo-white.png"}
                         alt="image d'accueil"
                     />
                 </Link>
-                <div >
-                    <div  onClick={toggleMenu}>
+                <div className={styles.content}>
+                    <div className={styles.menuIcon} onClick={toggleMenu}>
                         {menuOpen ? <CloseIcon /> : <MenuIcon />}
                     </div>
-                    <div >
-                        <div>
-                            <Link onClick={() => setMenuOpen(false)} href="#home">{ t('header.home') }</Link>
-                            <Link onClick={() => setMenuOpen(false)} href="/#skills">{ t('header.skills') }</Link>
-                            <Link onClick={() => setMenuOpen(false)} href="/#projects">{ t('header.projects') }</Link>
-                            <Link onClick={() => setMenuOpen(false)} href="/#contact">{ t('header.contact') }</Link>
+                    <div className={`${styles.navLinks} ${menuOpen ? styles.open : ''}`}>
+                        <div className={styles.divLink}>
+                            <Link className={styles.link} onClick={() => setMenuOpen(false)} href="#home">{ t('header.home') }</Link>
+                            <Link className={styles.link} onClick={() => setMenuOpen(false)} href="/#skills">{ t('header.skills') }</Link>
+                            <Link className={styles.link} onClick={() => setMenuOpen(false)} href="/#projects">{ t('header.projects') }</Link>
+                            <Link className={styles.link} onClick={() => setMenuOpen(false)} href="/#contact">{ t('header.contact') }</Link>
                         </div>
                         <div>
-                            <Link target='_blank' href="https://www.linkedin.com/in/ifanl-ibrahim"><LinkedInIcon  /></Link>
-                            <Link target='_blank' href="mailto:ifanl.ibrahim@gmail.com"><EmailIcon  /></Link>
-                            <Link target='_blank' href="https://github.com/ifanl-ibrahim"><GitHubIcon  /></Link>
+                            <Link target='_blank' href="https://www.linkedin.com/in/ifanl-ibrahim"><LinkedInIcon className={styles.social} /></Link>
+                            <Link target='_blank' href="mailto:ifanl.ibrahim@gmail.com"><EmailIcon className={styles.social} /></Link>
+                            <Link target='_blank' href="https://github.com/ifanl-ibrahim"><GitHubIcon className={styles.social} /></Link>
                         </div>
                     </div>
-                    <select defaultValue='fr' onChange={handleLangChange}>
+                    <select className={styles.languageSelect} defaultValue='fr' onChange={handleLangChange}>
                         <option value='fr'>FR</option>
                         <option value='en'>EN</option>
                     </select>
