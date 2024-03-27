@@ -8,27 +8,27 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 export default function Footer() {
 
     return (
-        <div className={styles.footer}>
-            <div className={styles.footerContainer}>
-                <Link className={styles.logoLight} href="/">
+        <div >
+            <div >
+                <Link  href="/">
                     <img
                         src={"../assets/logo-black.png"}
                         alt="image d'accueil"
                     />
                 </Link>
-                <Link className={styles.logoDark} href="/">
+                <Link href="/">
                     <img
                         src={"../assets/logo-white.png"}
                         alt="image d'accueil"
                     />
                 </Link>
-                <div className={styles.footerLink}>
-                    <Link target='_blank' href="https://www.linkedin.com/in/ifanl-ibrahim"><LinkedInIcon className={styles.social} /></Link>
-                    <Link target='_blank' href="mailto:ifanl.ibrahim@gmail.com"><EmailIcon className={styles.social} /></Link>
-                    <Link target='_blank' href="https://github.com/ifanl-ibrahim"><GitHubIcon className={styles.social} /></Link>
+                <div >
+                    <Link target='_blank' href="https://www.linkedin.com/in/ifanl-ibrahim"><LinkedInIcon  /></Link>
+                    <Link target='_blank' href="mailto:ifanl.ibrahim@gmail.com"><EmailIcon  /></Link>
+                    <Link target='_blank' href="https://github.com/ifanl-ibrahim"><GitHubIcon  /></Link>
                 </div>
             </div>
-            <p className={styles.copytight}>Copyright © Ifanl IBRAHIM All Rights Reserved</p>
+            <p >Copyright © Ifanl IBRAHIM All Rights Reserved</p>
         </div>
     );
 }
