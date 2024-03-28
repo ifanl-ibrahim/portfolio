@@ -16,8 +16,8 @@ export default function Projects() {
             title: 'Le Joli Port',
             description: `${ t('projects.project1.description') }`,
             language: 'Next.js',
-            cover: '../assets/MAT-20141001-7167.jpg',
-            logo: '../assets/logo-joliport-cercle.png',
+            cover: '../ressources/MAT-20141001-7167.jpg',
+            logo: '../ressources/logo-joliport-cercle.png',
             link: 'https://joli-port.vercel.app/'
         }
     ];

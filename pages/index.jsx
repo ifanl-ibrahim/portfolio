@@ -23,7 +23,7 @@ export default function Home() {
                     <div className={styles.text}>
                         <p>{ t('index.description') }</p>
                         <br /> <p>{ t('index.textCV') }</p> <br />
-                        <a href="../assets/CV-IBRAHIM.pdf" download="CV-IBRAHIM.pdf" target="blank">
+                        <a href="../ressources/CV-IBRAHIM.pdf" download="CV-IBRAHIM" target="blank">
                             <DownloadIcon />{ t('index.button') }
                         </a>
                     </div>
