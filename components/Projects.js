@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import styles from '../styles/projects.module.css';
+import styles from '/styles/projects.module.css';
 import { Card, Typography, CardMedia, CardContent, Modal, Link } from '@mui/material'
 import CloseIcon from '@mui/icons-material/Close';
 

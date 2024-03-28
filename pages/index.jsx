@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Head from 'next/head';
 import { useTranslation } from 'react-i18next';
-import styles from '../styles/index.module.css'
+import styles from '/styles/index.module.css'
 import DownloadIcon from '@mui/icons-material/Download';
 import Skills from '../components/Skills';
 import Projects from '../components/Projects';

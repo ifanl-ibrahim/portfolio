@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
-import styles from '../styles/skills.module.css';
+import styles from '/styles/skills.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHtml5, faCss3, faPhp, faGithub, faWordpress, faJs, faReact, faSymfony, faPython, faDev } from '@fortawesome/free-brands-svg-icons';
 import JoinFullIcon from '@mui/icons-material/JoinFull';

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import styles from '../styles/contact.module.css';
+import styles from '/styles/contact.module.css';
 import { Box, FormControl, TextField, Button, Snackbar } from '@mui/material';
 import { sendContactForm } from '../lib/api';
 
