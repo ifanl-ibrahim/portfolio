@@ -46,6 +46,10 @@
     background: rgb(var(--color-end-rgb));
 }
 
+.button:hover {
+    background: rgb(var(--color-start-rgb));
+}
+
 .form {
     display: grid;
     grid-template-columns: auto;
